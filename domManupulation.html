@@ -12,15 +12,34 @@
       <li id="roll">Roll</li>
       <li>College</li>
     </ul>
+    <li>Hiii</li>
+ 
+    <ol>
+      <li class="listItem">Firstname</li>
+      <li class="listItem">Lastname</li>
+      <li class="listItem">Company</li>
+    </ol>
   </body>
   <script>
     // 1.Select the element
+ 
+    //Id selectir
     let li1 = document.getElementById("roll");
  
+    //Tag selector
+    let tagNameSelector = document.getElementsByTagName("li")[2];
+ 
+    //class selector
+    let classSelctor = document.getElementsByClassName("listItem")[2];
+    console.log(classSelctor);
     // 2. Change content or html
  
     li1.innerHTML = "<h1>Modified to h1 tag</h1>";
  
+    tagNameSelector.innerHTML = "<h2>Modified li using tagselector</h2>";
+ 
     // li1.innerText = "Modified roll";
+ 
+    classSelctor.innerText = "Modified using class selector";
   </script>
 </html>
