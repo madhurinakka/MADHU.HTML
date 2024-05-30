@@ -14,7 +14,7 @@
     </ul>
     <li>Hiii</li>
  
-    <ol>
+    <ol id="Ordered">
       <li class="listItem">Firstname</li>
       <li class="listItem">Lastname</li>
       <li class="listItem">Company</li>
@@ -31,7 +31,15 @@
  
     //class selector
     let classSelctor = document.getElementsByClassName("listItem")[2];
-    console.log(classSelctor);
+ 
+    //query selector
+ 
+    let querySelector = document.querySelector(" .listItem ");
+ 
+    //QuerySelector all
+ 
+    let QuerySelectorAll = document.querySelectorAll("ordered.listItem");
+ 
     // 2. Change content or html
  
     li1.innerHTML = "<h1>Modified to h1 tag</h1>";
@@ -41,5 +49,7 @@
     // li1.innerText = "Modified roll";
  
     classSelctor.innerText = "Modified using class selector";
+
+tagNameSelector.inner
   </script>
 </html>

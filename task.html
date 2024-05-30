@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="user-entered-number"></h1id></h1>
+    <h2 id="comp-gen-num"></h2>
+    <p id ="ans"></p>
+    <button onclick="fun()">start</button>
+</body>
+<script>
+    let userInput = document.getElementById("user-entered-number");
+    let compValue = document.getElementById("comp-gen-num");
+    let ans = document.getElementById(="ans");
+    function fun() {
+        let a = prompt("enter number between 1 and 10");
+        let num =math.floor(math.random() *10);
+
+        userInput.innerText="you selected"+a;
+        compValue.innerText="computer generated "+ num;
+        if (a==num) {
+            ans.innerText="YAHHHH! you guessed it right";
+            else {
+                ans.innerText="opps! you guessed it wrong";
+            }
+        }
+    }
+</script>
+</html>
