@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <input type="email"id="email-input"name="email-validator"placeholder="email" />
+    <p id="email-validator"></p>
+    <input type="text" name="user-validator" placeholder="user-name"/>
+     <button onclick="submitData()">submit</button>
+     </form>
+</body>
+<script>
+    const allInputTags=document.getElementsByTagName("input");
+    console.log(allInputTags);
+    function submitData() {
+        for (let i=0;i<allInputTags.length;i++)
+        console.log(allInputTags[i]);
+    if (allInputTags[i].value ==""){
+        const pTag=document.getElementById(allInputTags[i].name);
+        pTag.innerText="you must enter this field";
+        pTag.style.color="red";
+        return;
+    }
+    else{
+        const pTag=document.getElementById(allInputTags[i].name);
+        pTag.innerText="verified";
+        pTag.style.color="green";
+        
+    }
+    
+        
+    }
+</script>
+</html>

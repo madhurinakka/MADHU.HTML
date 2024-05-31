@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regular Expression</title>
+  </head>
+  <body>
+    <input type="email" placeholder="enter email" onkeyup="Validate(this)" />
+    <p id="email-validator"></p>
+  </body>
+  <script>
+    const RegExp = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+    function Validate(params) {
+      const isValid = RegExp.test(params.value);
+      if (isValid == true) {
+        const pTag = document.getElementById("email-validator");
+        pTag.innerText = "Verified Sucessfully";
+        pTag.style.color = "green";
+      } else {
+        const pTag = document.getElementById("email-validator");
+        pTag.innerText = "Invalid Mail and only Gmail is accepted";
+        pTag.style.color = "red";
+      }
+    }
+  </script>
+</html>
